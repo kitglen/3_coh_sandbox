@@ -1,15 +1,24 @@
-// This is a manifest file that'll be compiled into application.js, which will include all the files
-// listed below.
-//
-// Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets/javascripts,
-// or vendor/assets/javascripts of plugins, if any, can be referenced here using a relative path.
-//
-// It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
-// the compiled file.
-//
-// WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
-// GO AFTER THE REQUIRES BELOW.
-//
-//= require jquery
-//= require jquery_ujs
-//= require jquery.mobile
+//= require ./app/lib/jquery/jquery-1.7.2.min.js
+//= require ./app/lib/underscore/underscore-min.js
+//= require ./app/lib/backbone/backbone-min.js
+//= require ./app/lib/backbone/backbone.localstorage-min.js
+//= require ./app/lib/sdk/ap_sdk.js
+//= require ./app/lib/jquery-mobile/jquery.mobile-1.1.1.min.js
+//= require ./app/lib/jquery-mobile-carousel/jquery-ui-1.8.21.custom.min.js
+//= require ./app/lib/jquery-mobile-carousel/jquery.ui.ipad.js
+//= require ./app/lib/jquery-mobile-carousel/jquery.mobile.carousel.js
+//= require ./app/lib/highcharts/highcharts.js
+//= require_tree ./app/ap/
+//= require_tree ./app/application/
+//= require ./app/view/view.coffee
+//= require ./app/view/component.coffee
+//= require ./app/view/base_page.coffee
+//= require ./app/view/base_form.coffee
+//= require ./app/view/base_button.coffee
+//= require ./app/view/base_chart.coffee
+//= require ./app/view/dialog.coffee
+//= require ./app/view/object_instance_form.coffee
+//= require ./app/view/object_query_form.coffee
+//= require_tree ./app/view_component/
+//= require_tree ./app/view_components/
+//= require_tree ./app/init/
