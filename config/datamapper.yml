@@ -1,0 +1,36 @@
+development:
+  adapter: rest
+  host: 'localhost'
+  format: 'json'
+  repositories:
+    '8':
+      adapter: rest
+      host: "forms.cityofhope.org"
+      port: "80"
+      format: "json"
+      scheme: "http"
+ 
+test:
+  adapter: abstract
+  host: 'localhost'
+  format: 'json'
+  repositories:
+    '8':
+      adapter: abstract
+      host: "forms.cityofhope.org"
+      port: "80"
+      format: "json"
+      scheme: "http"
+ 
+production:
+  adapter: rest
+  host: 'localhost'
+  format: 'json'
+  repositories:
+    '8':
+      adapter: rest
+      host: "forms.cityofhope.org"
+      port: "80"
+      format: "json"
+      scheme: "http"
+ 

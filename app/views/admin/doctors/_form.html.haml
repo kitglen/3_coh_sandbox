@@ -1,0 +1,34 @@
+= simple_form_for(@doctor, as: :doctor, url: @doctor.new? ? admin_doctors_path : admin_doctor_path(@doctor)) do |f|
+  = f.error_notification
+  .form-inputs
+    
+    
+    = f.input :business_phone
+    
+    = f.input :department
+    
+    = f.input :diseases
+    
+    = f.input :division
+    
+    = f.input :email
+    
+    = f.input :gender
+    
+    = f.input :high_level
+    
+    = f.input :languages
+    
+    = f.input :name
+    
+    = f.input :photo
+    
+    = f.input :program
+    
+    = f.input :specialty
+    
+    = f.input :trackback_url
+    
+    
+  .form-actions
+    = f.button :submit

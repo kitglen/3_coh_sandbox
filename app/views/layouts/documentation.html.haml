@@ -1,0 +1,25 @@
+!!!
+%html{lang: 'en', 'xml:lang' => 'en', xmlns: 'http://www.w3.org/1999/xhtml'}
+  %head
+    %title Funsies
+    = stylesheet_link_tag 'admin'
+    = javascript_include_tag 'admin'
+    = Apipie.include_stylesheets
+    = Apipie.include_javascripts
+    = csrf_meta_tags
+  %body
+    .header
+      - if current_admin
+        API v1: http://localhost:3000/api/v1
+        \|
+        = link_to 'Home', admin_root_path
+        \|
+        = link_to 'Documentation', apipie_path
+        \|
+        = link_to current_admin.email, edit_admin_registration_path
+        \|
+        = link_to "Sign out", destroy_admin_session_path, :method => :delete
+    .container
+      = yield
+  %footer
+    = yield :apipie_footer

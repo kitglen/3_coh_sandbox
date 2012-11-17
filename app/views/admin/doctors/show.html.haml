@@ -1,0 +1,62 @@
+%h1 Showing doctor
+
+%table
+  
+  %tr
+    %td Id
+    %td= @doctor.id
+  
+  %tr
+    %td Business Phone
+    %td= @doctor.business_phone
+  
+  %tr
+    %td Department
+    %td= @doctor.department
+  
+  %tr
+    %td Diseases
+    %td= @doctor.diseases
+  
+  %tr
+    %td Division
+    %td= @doctor.division
+  
+  %tr
+    %td Email
+    %td= @doctor.email
+  
+  %tr
+    %td Gender
+    %td= @doctor.gender
+  
+  %tr
+    %td High Level
+    %td= @doctor.high_level
+  
+  %tr
+    %td Languages
+    %td= @doctor.languages
+  
+  %tr
+    %td Name
+    %td= @doctor.name
+  
+  %tr
+    %td Photo
+    %td= @doctor.photo
+  
+  %tr
+    %td Program
+    %td= @doctor.program
+  
+  %tr
+    %td Specialty
+    %td= @doctor.specialty
+  
+  %tr
+    %td Trackback Url
+    %td= @doctor.trackback_url
+  
+= link_to 'Edit', edit_admin_doctor_path(@doctor)
+= link_to 'Back', admin_doctors_path

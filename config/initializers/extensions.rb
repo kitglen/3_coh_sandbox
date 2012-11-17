@@ -1,0 +1,2 @@
+# Initializer to configure extensions
+

@@ -1,0 +1,76 @@
+%h1 Listing doctors
+.home= link_to 'Return to Home', admin_path
+
+%table
+  %tr
+    
+    %th Id
+    
+    %th Business Phone
+    
+    %th Department
+    
+    %th Diseases
+    
+    %th Division
+    
+    %th Email
+    
+    %th Gender
+    
+    %th High Level
+    
+    %th Languages
+    
+    %th Name
+    
+    %th Photo
+    
+    %th Program
+    
+    %th Specialty
+    
+    %th Trackback Url
+    
+    %th
+    %th
+    %th
+
+  - @doctors.each do |doctor|
+    %tr
+      
+      %td= doctor.id
+      
+      %td= doctor.business_phone
+      
+      %td= doctor.department
+      
+      %td= doctor.diseases
+      
+      %td= doctor.division
+      
+      %td= doctor.email
+      
+      %td= doctor.gender
+      
+      %td= doctor.high_level
+      
+      %td= doctor.languages
+      
+      %td= doctor.name
+      
+      %td= doctor.photo
+      
+      %td= doctor.program
+      
+      %td= doctor.specialty
+      
+      %td= doctor.trackback_url
+      
+      %td= link_to 'Show', admin_doctor_path(doctor)
+      %td= link_to 'Edit', edit_admin_doctor_path(doctor)
+      %td= link_to 'Destroy', admin_doctor_path(doctor), :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New doctor', new_admin_doctor_path, {class: 'new-object'}
