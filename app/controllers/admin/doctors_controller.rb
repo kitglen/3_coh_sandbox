@@ -5,7 +5,7 @@ class Admin::DoctorsController < ApplicationController
   # GET /doctors
   # GET /doctors.json
   def index
-    @doctors = V2::Doctor.all
+    @doctors = V3::Doctor.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -17,7 +17,7 @@ class Admin::DoctorsController < ApplicationController
   # GET /doctors/1.json
   def show
     
-    @doctor = V2::Doctor.get(params[:id])
+    @doctor = V3::Doctor.get(params[:id])
     
     respond_to do |format|
       format.html # show.html.erb
@@ -28,7 +28,7 @@ class Admin::DoctorsController < ApplicationController
   # GET /doctors/new
   # GET /doctors/new.json
   def new
-    @doctor = V2::Doctor.new
+    @doctor = V3::Doctor.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -39,14 +39,14 @@ class Admin::DoctorsController < ApplicationController
   # GET /doctors/1/edit
   def edit
     
-    @doctor = V2::Doctor.get(params[:id])
+    @doctor = V3::Doctor.get(params[:id])
     
   end
 
   # POST /doctors
   # POST /doctors.json
   def create
-    @doctor = V2::Doctor.new(params[:doctor], as: :"System Admin")
+    @doctor = V3::Doctor.new(params[:doctor], as: :"System Admin")
     respond_to do |format|
       if @doctor.save
         format.html { redirect_to admin_doctor_url(@doctor), notice: 'doctor was successfully created.' }
@@ -62,7 +62,7 @@ class Admin::DoctorsController < ApplicationController
   # PUT /doctors/1.json
   def update
     
-    @doctor = V2::Doctor.get(params[:id])
+    @doctor = V3::Doctor.get(params[:id])
     
     @doctor.update_attributes(params[:doctor], as: :"System Admin")
     respond_to do |format|
@@ -80,7 +80,7 @@ class Admin::DoctorsController < ApplicationController
   # DELETE /doctors/1.json
   def destroy
     
-    @doctor = V2::Doctor.get(params[:id])
+    @doctor = V3::Doctor.get(params[:id])
     
     @doctor.destroy
 

@@ -13,12 +13,18 @@ AppTemplate::Application.routes.draw do
         resources :doctors
       
     end # v1
-    
-    namespace :v2 do
+
+namespace :v2 do
       
         resources :doctors
       
     end # v2
+    
+    namespace :v3 do
+      
+        resources :doctors
+      
+    end # v3
     
     # Mount rails engine gems.
     
